@@ -1,0 +1,57 @@
+<!-- <div th:fragment="parent(x,y)"
+    style="width: 600px; height: 300px; background-color: aquamarine;">
+    <h1>user legged in</h1>
+    <h1>this is parent fragement</h1> <br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi natus a
+        autem soluta labore alias, molestiae doloremque optio consequuntur
+        corrupti!</p>
+    <h3> value of x is <span th:text="${x}"></span></h3>
+    <h3> value of y is <span th:text="${y}"></span></h3>
+</div>
+
+<div th:fragment="parent2">
+    <h1>not logged in</h1>
+</div> -->
+
+<!DOCTYPE html>
+<html class="light" lang="en" th:fragment="parentFrag(content , title)"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title th:replace="${title}">parent fragment</title>
+        <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+
+        <!-- flowbite -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+            rel="stylesheet" />
+
+        <!-- font awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="dark:bg-gray-900 dark:text-white">
+        <!-- Common header -->
+
+        <div data-th-replace="fragments/NavBar/navbar :: navbar"></div>
+        <br><br><br><br><br><br>
+        <!-- <h1>parent fragment Base</h1>
+        <h2>base page Content</h2> -->
+
+        <!-- about section -->
+        <div class="p-5">
+            <section th:replace="${content}"></section>
+        </div>
+
+        <!-- common foooter -->
+        <footer class="p-4">
+            this is common footer
+        </footer>
+
+        <script data-th-src="@{/javascript/script.js}"></script>
+
+    </body>
+</html>

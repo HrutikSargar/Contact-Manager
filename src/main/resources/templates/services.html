@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parentFrag(~{::#content} ,~{::title})}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services page</title>
+    </head>
+    <body>
+
+        <div id="content">
+            <h1>Welcome to Services Page</h1>
+
+            <h3>Services offered by SCM</h3>
+
+            <details>
+
+                <summary>click here </summary>
+                <table border="1">
+
+                    <tr>
+                        <th>
+                            items
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>mango</td>
+                    </tr>
+                    <tr>
+                        <td>mango</td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>services page</title>
+    </head>
+    <body>
+        <h1>services page </h1>
+         this below tag is used to pass the p tag as dynamic content to the fragment to replace this below div  -->
+<!-- yo can use id or tag name and class name to pass
+        <div th:replace="~{serFragemnt :: serfrag(~{::#para})}">
+            <p id="para"> this is it changed </p>
+        </div>
+    </body>
+</html> -->
