@@ -1,0 +1,32 @@
+package com.scm.scm.Entities;
+
+import org.hibernate.annotations.ManyToAny;
+import org.hibernate.annotations.SelectBeforeUpdate;
+
+import com.fasterxml.jackson.databind.ser.std.StdArraySerializers.LongArraySerializer;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class SocialLink {
+
+    @Id
+    private Long id;
+
+    private String link;
+
+    private String title;
+
+    @ManyToOne
+    private Contact contact;
+}
